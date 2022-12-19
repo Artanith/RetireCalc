@@ -8,6 +8,26 @@ function grabValue(name){
     return parseFloat(document.getElementById(name).value);
 };
 
+function output (amount) {
+
+    //Grab Results div and Create an Output div
+    var target = document.getElementById("results");
+    label = "$" + amount;
+    var outputItem = document.createElement('div');
+
+    //Set Text For New Div
+    outputItem.innerText = label;
+
+    //Render Output
+    target.appendChild(outputItem);
+
+};
+
+//Addd Commas to numbers
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 //Calculate Retirement
 function retireAnalysis() {
 
@@ -36,7 +56,7 @@ function retireAnalysis() {
 
     for (var i=1; i <= monthsToRetire; i++ ) {     
 
-        //Calculate Monthly Increase - Every 12 Months Increase Account For Raise
+        //Calculate Monthly Increase Until Retirement - Every 12 Months Increase Account For Raise
         if ((i/12 - Math.floor(i/12)) === 0) {
 
             monthlyAdd = monthlyAdd * (1 + raise);
@@ -49,7 +69,9 @@ function retireAnalysis() {
 
     };
 
- retireValue = Math.round(calc);
+    retireValue = numberWithCommas(Math.round(calc));
+    
+    output(retireValue);
 };
 
 //Get and Listen For Button Clicks
