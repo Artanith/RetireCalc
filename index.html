@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Retirement Calculator</title>
+
+        <!-- Roboto font embed -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+
+        <!-- Stylesheets-->
+        <link rel="stylesheet" type="text/css" href="Resources/CSS/style.css">
+    </head>
+
+    <body>
+        
+        <!-- Income/Payment Input Boxes-->
+        <br/>
+        <label for="income">Yearly Salary:</label>
+        <input type="number" id="income" name="income" value="0">
+        <br/>
+        <label for="raise">Yearly Raise %:</label>
+        <input type="number" id="raise" name="raise" value="3">
+        <br/>
+        <label for="fundPct">Enter Percentage of Paycheck Saved:</label>
+        <input type="number" id="fundPct" name="fundPct" value="6">
+        <br/>
+        <label for="payPeriod">Select Pay Frequency:</label>
+        <select name="payPeriod" id="payPeriod">
+            <option value="52">Weekly</option>
+            <option value="26">Bi-Weekly</option>
+            <option value="12">Monthly</option>
+        </select>
+        
+ 
+        <!-- Age Selection Input Boxes-->
+        <br/>
+        <label for="retireAge">Enter Age Expected to Retire:</label>
+        <input type="number" id="retireAge" name="retireAge" value="65">
+        <br/>
+        <label for="deathAge">Enter Life Expectancy:</label>
+        <input type="number" id="deathAge" name="deathAge" value="85">
+        <br/>
+        <label for="currentAge">Enter Current Age:</label>
+        <input type="number" id="currentAge" name="currentAge" value="0">
+
+        <!-- Retirement Fund Return Input Boxes-->
+        <br/>
+        <label for="initial">Initial Amount In Retirement:</label>
+        <input type="number" id="initial" name="initial" value="7">
+        <br/>
+        <label for="returnPct">Enter Anticipated Yearly Market Return %:</label>
+        <input type="number" id="returnPct" name="returnPct" value="7">
+        <br/>
+        <label for="spend">Yearly Spend Post Retirement:</label>
+        <input type="number" id="spend" name="spend" value="0">
+
+        <!-- Run Retirement Analysis Button -->
+        <br/><br/>
+            <button type="button" id="retireButton">Retirement Analysis</button>
+        
+        
+            <!-- Javascript Files -->
+        <script src="Resources/JS/main.js"> </script>
+    </body>
+
+</html>
